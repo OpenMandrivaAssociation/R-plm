@@ -1,26 +1,27 @@
-%bcond_without bootstrap
+%bcond_with bootstrap
 %global packname  plm
 %global rlibdir  %{_libdir}/R/library
 
 Name:             R-%{packname}
 Version:          1.2_8
-Release:          1
+Release:          2
 Summary:          Linear Models for Panel Data
 Group:            Sciences/Mathematics
 License:          GPL (>= 2)
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_1.2-8.tar.gz
-Requires:         R-stats R-bdsmatrix R-nlme R-Formula R-MASS R-sandwich 
+Requires:         R-stats R-bdsmatrix R-nlme R-Formula R-MASS R-sandwich
 %if %{with bootstrap}
 Requires:         R-lmtest R-car
 %else
-Requires:         R-lmtest R-car R-AER 
+Requires:         R-lmtest R-car R-AER
 %endif
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-stats R-bdsmatrix R-nlme R-Formula R-MASS R-sandwich
+BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-stats
+BuildRequires:    R-bdsmatrix R-nlme R-Formula R-MASS R-sandwich
 %if %{with bootstrap}
 BuildRequires:    R-lmtest R-car
 %else
-BuildRequires:    R-lmtest R-car R-AER 
+BuildRequires:    R-lmtest R-car R-AER
 %endif
 
 %description

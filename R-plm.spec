@@ -11,17 +11,15 @@ License:          GPL (>= 2)
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_1.2-8.tar.gz
 Requires:         R-stats R-bdsmatrix R-nlme R-Formula R-MASS R-sandwich
-%if %{with bootstrap}
 Requires:         R-lmtest R-car
-%else
-Requires:         R-lmtest R-car R-AER
+%if %{without bootstrap}
+Requires:         R-AER
 %endif
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-stats
-BuildRequires:    R-bdsmatrix R-nlme R-Formula R-MASS R-sandwich
-%if %{with bootstrap}
+BuildRequires:    R-devel Rmath-devel texlive-collection-latex
+BuildRequires:    R-stats R-bdsmatrix R-nlme R-Formula R-MASS R-sandwich
 BuildRequires:    R-lmtest R-car
-%else
-BuildRequires:    R-lmtest R-car R-AER
+%if %{without bootstrap}
+BuildRequires:    R-AER
 %endif
 
 %description

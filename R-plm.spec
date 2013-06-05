@@ -3,13 +3,13 @@
 %global rlibdir  %{_libdir}/R/library
 
 Name:             R-%{packname}
-Version:          1.3_1
+Version:          1.3.1
 Release:          1
 Summary:          Linear Models for Panel Data
 Group:            Sciences/Mathematics
 License:          GPL (>= 2)
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
-Source0:          http://cran.r-project.org/src/contrib/%{packname}_1.3-1.tar.gz
+Source0:          http://cran.r-project.org/src/contrib/plm_1.3-1.tar.gz
 Requires:         R-stats R-bdsmatrix R-nlme R-Formula R-MASS R-sandwich
 Requires:         R-lmtest R-car
 %if %{without bootstrap}
@@ -53,3 +53,4 @@ rm -f %{buildroot}%{rlibdir}/R.css
 %{rlibdir}/%{packname}/R
 %{rlibdir}/%{packname}/data
 %{rlibdir}/%{packname}/help
+

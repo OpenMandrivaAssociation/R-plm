@@ -4,7 +4,7 @@
 
 Name:             R-%{packname}
 Version:          1.3_1
-Release:          1
+Release:          2
 Summary:          Linear Models for Panel Data
 Group:            Sciences/Mathematics
 License:          GPL (>= 2)

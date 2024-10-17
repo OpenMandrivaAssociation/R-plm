@@ -8,7 +8,7 @@ Release:          2
 Summary:          Linear Models for Panel Data
 Group:            Sciences/Mathematics
 License:          GPL (>= 2)
-URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
+URL:              https://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_1.3-1.tar.gz
 Requires:         R-stats R-bdsmatrix R-nlme R-Formula R-MASS R-sandwich
 Requires:         R-lmtest R-car
